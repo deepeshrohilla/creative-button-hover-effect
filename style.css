@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+button {
+    position: relative;
+    z-index: 1;
+    width: 450px;
+    height: 80px;
+    border-radius: 50px;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #dbdbdb;
+    color: #092147;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: #ffffff;
+    transition-delay: 0.6s;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #00000041;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover::after {
+    width: 100%;
+}
+
+span {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+span:nth-child(1) {
+    background-color: #9ebbe9;
+    transition-delay: 0.25s;
+}
+
+span:nth-child(2) {
+    background-color: #1a488ec5;
+    transition-delay: 0.38s;
+}
+
+button:hover span {
+    width: 100%;
+}
